@@ -19,6 +19,9 @@ export class User extends BaseModel {
   @Column()
   email!: string;
 
+  @Column()
+  receive_notifications!: boolean;
+
   @OneToMany(
     _type => SocialProviderUser,
     socialProviderUser => socialProviderUser.user,
